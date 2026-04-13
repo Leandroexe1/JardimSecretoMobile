@@ -11,20 +11,28 @@ export default function SplashScreen() {
         backgroundColor: "#6C63FF",
       }}
     >
-      <Text style={{ fontSize: 32, color: "white", marginBottom: 20 }}>
-        Jardim Secreto
-      </Text>
       <Image
         source={{
           uri: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQBCAMBEQACEQEDEQH/..."
         }}
         style={{
-          width: 200,
-          height: 200,
-          borderRadius: 20,
+          width: 180,
+          height: 180,
+          marginBottom: 20,
         }}
         resizeMode="contain"
       />
+
+      <Text
+        style={{
+          color: "white",
+          fontSize: 18,
+          textAlign: "center",
+          paddingHorizontal: 20,
+        }}
+      >
+        onde a natureza revela seus pequenos segredos
+      </Text>
     </View>
   );
 }
