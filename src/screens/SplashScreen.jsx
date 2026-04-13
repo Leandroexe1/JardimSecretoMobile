@@ -1,17 +1,30 @@
-import { View, Text, Button } from 'react-native';
+import React from "react";
+import { View, Text, Image } from "react-native";
 
-export default function App() {
+export default function SplashScreen() {
   return (
-    <View style={{ flex: 1, justifyContent: 'space-between', alignItems: 'center', backgroundColor: '#6C63FF' }}>
-      
-      <Text style={{ fontSize: 30, color: 'white', marginTop: 100 }}>
+    <View
+      style={{
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "#6C63FF",
+      }}
+    >
+      <Text style={{ fontSize: 32, color: "white", marginBottom: 20 }}>
         Jardim Secreto
       </Text>
-
-      <View style={{ width: 200, marginBottom: 50 }}>
-        <Button title="Home" color="#0805acff" onPress={() => {}} />
-      </View>
-
+      <Image
+        source={{
+          uri: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQBCAMBEQACEQEDEQH/..."
+        }}
+        style={{
+          width: 200,
+          height: 200,
+          borderRadius: 20,
+        }}
+        resizeMode="contain"
+      />
     </View>
   );
 }
