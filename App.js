@@ -1,10 +1,18 @@
 import { NavigationContainer } from "@react-navigation/native";
-import TabNavigation from "./src/navigation/tabNavigation";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
+import SplashScreen from "./src/screens/SplashScreen";
+import HomeScreen from "./src/screens/HomeScreen";
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <TabNavigation />
+      <Stack.Navigator initialRouteName="Splash">
+        <Stack.Screen name="Splash" component={SplashScreen} />
+        <Stack.Screen name="Home" component={HomeScreen} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }

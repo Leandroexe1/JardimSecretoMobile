@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Image } from "react-native";
+import { View, Image, Text } from "react-native";
 
 export default function SplashScreen() {
   return (
@@ -11,22 +11,34 @@ export default function SplashScreen() {
         backgroundColor: "#6C63FF",
       }}
     >
-      <Image
-        source={{
-          uri: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQBCAMBEQACEQEDEQH/..."
-        }}
+   
+      <Text
         style={{
-          width: 180,
-          height: 180,
+          color: "white",
+          fontSize: 28,
+          fontWeight: "bold",
+          marginBottom: 20,
+        }}
+      >
+        Jardim Secreto
+      </Text>
+
+    
+      <Image
+        source={require("../../assets/logo.png")}
+        style={{
+          width: 250,
+          height: 250,
           marginBottom: 20,
         }}
         resizeMode="contain"
       />
 
+      
       <Text
         style={{
           color: "white",
-          fontSize: 18,
+          fontSize: 16,
           textAlign: "center",
           paddingHorizontal: 20,
         }}
