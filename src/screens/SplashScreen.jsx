@@ -1,17 +1,17 @@
 import React from "react";
-import { View, Image, Text } from "react-native";
+import { View, Image, Text, TouchableOpacity } from "react-native";
 
-export default function SplashScreen() {
+export default function SplashScreen({ navigation }) {
   return (
     <View
       style={{
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "#6C63FF",
+        backgroundColor: "#8daa81",
       }}
     >
-   
+     
       <Text
         style={{
           color: "white",
@@ -34,17 +34,39 @@ export default function SplashScreen() {
         resizeMode="contain"
       />
 
-      
+     
       <Text
         style={{
           color: "white",
           fontSize: 16,
           textAlign: "center",
           paddingHorizontal: 20,
+          marginBottom: 30,
         }}
       >
         onde a natureza revela seus pequenos segredos
       </Text>
+
+      
+      <TouchableOpacity
+        onPress={() => navigation.navigate("Home")}
+        style={{
+          backgroundColor: "#ffffff",
+          paddingVertical: 12,
+          paddingHorizontal: 30,
+          borderRadius: 25,
+        }}
+      >
+        <Text
+          style={{
+            color: "#8daa81",
+            fontSize: 16,
+            fontWeight: "bold",
+          }}
+        >
+          acessar
+        </Text>
+      </TouchableOpacity>
     </View>
   );
 }
