@@ -1,26 +1,50 @@
-import { View, Text, Button } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
-export default function App() {
+export default function HomeScreen() {
   return (
-    <View style={{ 
-      flex: 1, 
-      justifyContent: 'space-between', 
-      alignItems: 'center', 
-      backgroundColor: '#2ecc71', // verde bonito
-      padding: 50 
-    }}>
+    <View style={styles.container}>
       
-      <Text style={{ 
-        fontSize: 32, 
-        color: 'white', 
-        marginTop: 100,
-        fontWeight: 'bold'
-      }}>
-        Jardim Secreto
+      <Text style={styles.bemVindo}>
+        Olá, visitante!
       </Text>
 
-      <Button title="Acessar" color="#27ae60" onPress={() => {}} />
+      <TouchableOpacity style={styles.botao}>
+        <Text style={styles.textoBotao}>
+          Entrar
+        </Text>
+      </TouchableOpacity>
 
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  
+  container: {
+    flex: 1,
+    backgroundColor: "#D9E2D5",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+
+  bemVindo: {
+    fontSize: 28,
+    fontWeight: "bold",
+    color: "#4A5D23",
+    marginBottom: 30,
+  },
+
+  botao: {
+    backgroundColor: "#4A5D23",
+    paddingVertical: 12,
+    paddingHorizontal: 40,
+    borderRadius: 10,
+  },
+
+  textoBotao: {
+    color: "#fff",
+    fontSize: 16,
+    fontWeight: "bold",
+  },
+
+});

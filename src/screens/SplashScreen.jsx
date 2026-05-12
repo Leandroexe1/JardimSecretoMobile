@@ -1,72 +1,76 @@
-import React from "react";
-import { View, Image, Text, TouchableOpacity } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View, } from "react-native";
 
 export default function SplashScreen({ navigation }) {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#8daa81",
-      }}
-    >
-     
-      <Text
-        style={{
-          color: "white",
-          fontSize: 28,
-          fontWeight: "bold",
-          marginBottom: 20,
-        }}
-      >
+    <View style={styles.container}>
+
+      <Text style={styles.title}>
         Jardim Secreto
       </Text>
 
-    
       <Image
         source={require("../../assets/logo.png")}
-        style={{
-          width: 250,
-          height: 250,
-          marginBottom: 20,
-        }}
-        resizeMode="contain"
+        style={styles.logo}
       />
 
-     
-      <Text
-        style={{
-          color: "white",
-          fontSize: 16,
-          textAlign: "center",
-          paddingHorizontal: 20,
-          marginBottom: 30,
-        }}
-      >
-        onde a natureza revela seus pequenos segredos
+      <Text style={styles.subtitle}>
+        Onde a natureza revela seus pequenos segredos
       </Text>
 
-      
       <TouchableOpacity
-        onPress={() => navigation.navigate("Home")}
-        style={{
-          backgroundColor: "#ffffff",
-          paddingVertical: 12,
-          paddingHorizontal: 30,
-          borderRadius: 25,
-        }}
+        style={styles.buttonCustom}
+        onPress={() => navigation.navigate("Cadastro")}
       >
-        <Text
-          style={{
-            color: "#8daa81",
-            fontSize: 16,
-            fontWeight: "bold",
-          }}
-        >
-          acessar
+        <Text style={styles.buttonText}>
+          Acessar
         </Text>
       </TouchableOpacity>
+
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+
+  container: {
+    flex: 1,
+    backgroundColor: "#D9E2D5",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 20,
+  },
+
+  logo: {
+    width: 180,
+    height: 180,
+    marginVertical: 20,
+  },
+
+  title: {
+    fontSize: 30,
+    fontWeight: "bold",
+    color: "#4A5D23",
+  },
+
+  subtitle: {
+    fontSize: 15,
+    color: "#4A5D23",
+    textAlign: "center",
+    marginTop: 20,
+    marginBottom: 40,
+  },
+
+  buttonCustom: {
+    backgroundColor: "#4A5D23",
+    paddingVertical: 12,
+    paddingHorizontal: 40,
+    borderRadius: 10,
+  },
+
+  buttonText: {
+    color: "#fff",
+    fontSize: 16,
+    fontWeight: "bold",
+  },
+
+});
